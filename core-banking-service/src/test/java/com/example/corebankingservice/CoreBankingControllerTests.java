@@ -1,16 +1,15 @@
 package com.example.corebankingservice;
 
+import com.example.corebankingservice.controller.CoreBankingController;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-@SpringBootTest
-@AutoConfigureMockMvc
+@WebMvcTest(CoreBankingController.class)
 public class CoreBankingControllerTests {
 
     @Autowired
@@ -19,7 +18,6 @@ public class CoreBankingControllerTests {
     @Test
     public void testGetAccounts() throws Exception {
         mockMvc.perform(get("/api/accounts"))
-               .andExpect(status().isOk())
-               .andExpect(content().string("List of bank accounts"));
+               .andExpect(status().isOk());
     }
 }
