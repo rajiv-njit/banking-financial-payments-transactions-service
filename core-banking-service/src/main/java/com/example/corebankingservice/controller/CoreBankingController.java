@@ -1,3 +1,5 @@
+/* Manages account-related functionalities, such as retrieving account details or transaction histories.*/
+
 package com.example.corebankingservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;

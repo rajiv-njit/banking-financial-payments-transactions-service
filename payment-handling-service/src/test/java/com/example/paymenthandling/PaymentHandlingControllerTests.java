@@ -11,7 +11,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 // CR -001 - Additional POST endpoints in the test case
-import com.example.paymenthandling.PaymentRequest;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import org.springframework.http.MediaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
