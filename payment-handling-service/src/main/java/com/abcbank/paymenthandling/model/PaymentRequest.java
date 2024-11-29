@@ -1,4 +1,4 @@
-package com.example.paymenthandling;
+package com.abcbank.paymenthandling.model;
 
 public class PaymentRequest {
 
