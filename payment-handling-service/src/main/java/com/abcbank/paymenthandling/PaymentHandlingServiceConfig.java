@@ -1,4 +1,4 @@
-package com.example.paymenthandling;
+package com.abcbank.paymenthandling;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

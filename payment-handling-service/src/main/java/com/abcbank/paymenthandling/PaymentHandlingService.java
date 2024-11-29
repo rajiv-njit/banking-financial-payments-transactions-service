@@ -1,11 +1,11 @@
-package com.example.corebankingservice;
+package com.abcbank.paymenthandling.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoreBankingService {
+public class PaymentHandlingService {
     public static void main(String[] args) {
-        SpringApplication.run(CoreBankingService.class, args);
+        SpringApplication.run(PaymentHandlingService.class, args);
     }
 }
