@@ -5,52 +5,106 @@
 
     <modelVersion>4.0.0</modelVersion>
     
+    <!-- Parent POM for Spring Boot to inherit properties and versions -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.0</version> <!-- Adjusted to be compatible with Spring Cloud -->
+        <version>3.2.0</version> <!-- Adjusted version for compatibility -->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     
-    <groupId>com.example</groupId>
+    <!-- Project coordinates -->
+    <groupId>com.abcbank</groupId> <!-- Recommended to be meaningful to your organization -->
     <artifactId>paymenthandlingservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>paymenthandlingservice</name>
+    <name>Payment Handling Service</name>
     <description>Payment Handling Service project for Spring Boot</description>
     
     <properties>
-        <java.version>17</java.version>
-        <spring-cloud.version>2023.0.0</spring-cloud.version> <!-- Compatible version -->
+        <java.version>17</java.version> <!-- Java version -->
+        <spring-cloud.version>2023.0.0</spring-cloud.version> <!-- Spring Cloud version -->
     </properties>
     
     <dependencies>
+        <!-- Spring Boot Starter for web applications -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        
+        <!-- Spring Boot Starter for security -->
         <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-security</artifactId>
-</dependency>
-<dependency>
-    <groupId>io.jsonwebtoken</groupId>
-    <artifactId>jjwt</artifactId>
-    <version>0.9.1</version>
-</dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
+        <!-- Library for handling JWT -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
+        <!--Spring Data JPA Dependency-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!--Jakarta Persistence Dependency-->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!--Database Driver Dependency-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version> <!-- You can check for the latest version -->
+        </dependency>
+        
+        <!-- Spring Cloud OpenFeign for declarative REST client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        
+        <!-- Spring Boot Starter for Thymeleaf -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        
+        <!-- Development tools for easier application development -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        
+        <!-- Spring Boot Starter for testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        
+        <!-- Mockito for unit testing -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- MySQL connector for database interactions -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version> <!-- Check for the latest stable version -->
         </dependency>
     </dependencies>
     
@@ -68,18 +122,21 @@
     
     <build>
         <plugins>
+            <!-- Spring Boot Maven Plugin for packaging and running the application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>3.2.0</version> <!-- Adjusted version -->
+                <version>3.2.0</version> <!-- Ensure compatibility with Spring Boot -->
             </plugin>
+            
+            <!-- Maven Compiler Plugin to configure Java compilation -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.8.1</version> <!-- Ensure compatibility with newer Java versions -->
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>${java.version}</source> <!-- Use the version defined in properties -->
+                    <target>${java.version}</target> <!-- Use the same version for compilation -->
                 </configuration>
             </plugin>
         </plugins>
@@ -88,13 +145,13 @@
     <repositories>
         <repository>
             <id>spring-release</id>
-            <url>https://repo.spring.io/release</url>
+            <url>https://repo.spring.io/release</url> <!-- Repository for Spring released artifacts -->
         </repository>
         <repository>
             <id>spring-milestones</id>
-            <url>https://repo.spring.io/milestone</url>
+            <url>https://repo.spring.io/milestone</url> <!-- Repository for Spring milestone artifacts -->
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>false</enabled> <!-- Disable snapshots for stability -->
             </snapshots>
         </repository>
     </repositories>

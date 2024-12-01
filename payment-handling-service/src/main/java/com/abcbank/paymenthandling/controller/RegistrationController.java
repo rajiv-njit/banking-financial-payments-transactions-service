@@ -1,4 +1,4 @@
-package com.abcbank.corebankingservice.controller;
+package com.abcbank.paymenthandling.controller;
 
 public class RegistrationController {
     

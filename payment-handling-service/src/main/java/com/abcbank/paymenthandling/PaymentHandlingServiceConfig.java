@@ -8,6 +8,6 @@ import org.springframework.web.client.RestTemplate;
 public class PaymentHandlingServiceConfig {
     @Bean
     public RestTemplate restTemplate() {
-        return new RestTemplate();
+        return new RestTemplate(); // Create a RestTemplate bean for making HTTP requests
     }
 }
