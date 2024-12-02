@@ -1,0 +1,197 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.abcbank:paymenthandlingservice >-----------------
+[INFO] Building Payment Handling Service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ paymenthandlingservice ---
+[INFO] Deleting /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ paymenthandlingservice ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ paymenthandlingservice ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 17 source files to /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ paymenthandlingservice ---
+[INFO] skip non existing resourceDirectory /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ paymenthandlingservice ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ paymenthandlingservice ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests
+13:43:31.891 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests]: PaymentHandlingControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:43:31.947 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.abcbank.paymenthandling.PaymentHandlingService for test class com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests
+13:43:32.014 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2024-12-01T13:43:32.169-05:00  INFO 14667 --- [payment-handling-service] [           main] c.a.p.c.PaymentHandlingControllerTests   : Starting PaymentHandlingControllerTests using Java 17.0.13 with PID 14667 (started by rajiv in /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service)
+2024-12-01T13:43:32.170-05:00  INFO 14667 --- [payment-handling-service] [           main] c.a.p.c.PaymentHandlingControllerTests   : No active profile set, falling back to 1 default profile: "default"
+2024-12-01T13:43:32.464-05:00  INFO 14667 --- [payment-handling-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-01T13:43:32.487-05:00  INFO 14667 --- [payment-handling-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2024-12-01T13:43:32.580-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=69b8d5ab-7b2d-3a37-beda-e25e58c2ce19
+2024-12-01T13:43:32.701-05:00  INFO 14667 --- [payment-handling-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-01T13:43:32.721-05:00  INFO 14667 --- [payment-handling-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-12-01T13:43:32.733-05:00  INFO 14667 --- [payment-handling-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-01T13:43:32.819-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-01T13:43:32.835-05:00  INFO 14667 --- [payment-handling-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-01T13:43:32.991-05:00  INFO 14667 --- [payment-handling-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bec1589
+2024-12-01T13:43:32.992-05:00  INFO 14667 --- [payment-handling-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-01T13:43:33.342-05:00  INFO 14667 --- [payment-handling-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-01T13:43:33.368-05:00  INFO 14667 --- [payment-handling-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-01T13:43:33.530-05:00  WARN 14667 --- [payment-handling-service] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-01T13:43:33.671-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6abaa14b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b60be3, org.springframework.security.web.context.SecurityContextHolderFilter@1718de70, org.springframework.security.web.header.HeaderWriterFilter@38e88e13, org.springframework.web.filter.CorsFilter@2f3565c0, org.springframework.security.web.csrf.CsrfFilter@22349ad3, org.springframework.security.web.authentication.logout.LogoutFilter@33997e07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41736818, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@457d3f54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64a8851a, org.springframework.security.web.access.ExceptionTranslationFilter@1016b44e, org.springframework.security.web.access.intercept.AuthorizationFilter@68303aad]
+2024-12-01T13:43:33.773-05:00  WARN 14667 --- [payment-handling-service] [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-12-01T13:43:33.813-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-12-01T13:43:33.813-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-12-01T13:43:33.814-05:00  INFO 14667 --- [payment-handling-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-12-01T13:43:33.843-05:00  INFO 14667 --- [payment-handling-service] [           main] c.a.p.c.PaymentHandlingControllerTests   : Started PaymentHandlingControllerTests in 1.839 seconds (process running for 2.288)
+2024-12-01T13:43:33.928-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/payments
+2024-12-01T13:43:33.932-05:00  WARN 14667 --- [payment-handling-service] [           main] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/api/payments' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2024-12-01T13:43:33.936-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/payments
+2024-12-01T13:43:33.936-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/payments
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Authorization:"Bearer mockJwtToken", Content-Length:"101"]
+             Body = {"account":"123456","bankName":"Bank ABC","fromAccount":"123456","toAccount":"654321","amount":100.0}
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@8b727cb}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.131 s <<< FAILURE! -- in com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests
+[ERROR] com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests.testProcessPayment -- Time elapsed: 0.098 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.abcbank.paymenthandling.controller.PaymentHandlingControllerTests.testProcessPayment(PaymentHandlingControllerTests.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[INFO] Running com.abcbank.paymenthandling.controller.LoginControllerTests
+2024-12-01T13:43:33.955-05:00  INFO 14667 --- [payment-handling-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.abcbank.paymenthandling.controller.LoginControllerTests]: LoginControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-01T13:43:33.957-05:00  INFO 14667 --- [payment-handling-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.abcbank.paymenthandling.PaymentHandlingService for test class com.abcbank.paymenthandling.controller.LoginControllerTests
+2024-12-01T13:43:33.991-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.security.web.FilterChainProxy        : Securing POST /api/login
+2024-12-01T13:43:33.991-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/login
+2024-12-01T13:43:33.991-05:00 DEBUG 14667 --- [payment-handling-service] [           main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/login
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"40"]
+             Body = {"username":"rajiv","password":"123456"}
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@6dc98c02}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Forbidden
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", X-Content-Type-Options:"nosniff", X-XSS-Protection:"0", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.041 s <<< FAILURE! -- in com.abcbank.paymenthandling.controller.LoginControllerTests
+[ERROR] com.abcbank.paymenthandling.controller.LoginControllerTests.testLogin -- Time elapsed: 0.009 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<403>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.abcbank.paymenthandling.controller.LoginControllerTests.testLogin(LoginControllerTests.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   LoginControllerTests.testLogin:57 Status expected:<200> but was:<403>
+[ERROR]   PaymentHandlingControllerTests.testProcessPayment:47 Status expected:<200> but was:<403>
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.561 s
+[INFO] Finished at: 2024-12-01T13:43:34-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project paymenthandlingservice: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/rajiv/Desktop/banking-financial-payments-transactions-service/payment-handling-service/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
