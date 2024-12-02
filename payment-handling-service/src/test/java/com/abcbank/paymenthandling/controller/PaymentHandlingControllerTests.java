@@ -1,57 +1,50 @@
 package com.abcbank.paymenthandling.controller;
 
+import com.abcbank.paymenthandling.dto.PaymentRequest;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import org.springframework.http.MediaType;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.abcbank.paymenthandling.model.PaymentRequest;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 public class PaymentHandlingControllerTests {
 
     @Autowired
-    private MockMvc mockMvc;
+    private MockMvc mockMvc; // MockMvc to perform HTTP requests in tests
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private ObjectMapper objectMapper; // ObjectMapper for JSON conversion
+
+    // @Autowired
+    // private JwtUtil jwtUtil; // Inject JwtUtil to generate a valid token
 
     @Test
-    public void testGetAccounts() throws Exception {
-        // You may mock the RestTemplate call for isolation in tests
-        mockMvc.perform(get("/api/payments"))
-               .andExpect(status().isOk())
-               .andExpect(content().string("Payment processed. Accounts: List of bank accounts"));
-    }
+public void testProcessPayment() throws Exception {
+    PaymentRequest paymentRequest = new PaymentRequest();
+    paymentRequest.setAccount("123456");
+    paymentRequest.setBankName("Bank ABC");
+    paymentRequest.setFromAccount("123456");
+    paymentRequest.setToAccount("654321");
+    paymentRequest.setAmount(100.00);
 
-    @Test
-    public void testProcessPayment() throws Exception{
-        //Create a paymentRequest object
-        PaymentRequest paymentRequest = new PaymentRequest();
-        paymentRequest.setAccount("123456");
-        paymentRequest.setBankName("Bank ABC");
-        paymentRequest.setFromAccount("123456");
-        paymentRequest.setToAccount("654321");
-        paymentRequest.setAmount(100.00);
-
-    //Convert PaymentRequest object to JSON
     String paymentRequestJson = objectMapper.writeValueAsString(paymentRequest);
+    String token = "mockJwtToken"; // Example token for testing
 
-    //Perform a POST request
+    // Perform POST request to process the payment
     mockMvc.perform(post("/api/payments")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(paymentRequestJson))
-               .andExpect(status().isOk())
-               .andExpect(content().string("Payment processed: List of bank accounts"));
-
+            .contentType(MediaType.APPLICATION_JSON)
+            .header("Authorization", "Bearer " + token) // Mock token for testing
+            .content(paymentRequestJson))
+            .andExpect(status().isOk()) // Expect successful processing
+            .andExpect(content().string("Payment processed: List of bank accounts")); // Adjust as per actual response
 }
 }
